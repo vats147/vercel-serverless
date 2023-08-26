@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
   if (!file) {
     const error = new Error("Please upload a file");
     error.httpStatusCode = 400;
-    return next(error);
+    res.status(400).json({data:"NO File  "})
   }
 
   // Your existing cropPDF function
